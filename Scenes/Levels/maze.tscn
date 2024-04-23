@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dijb3v2jc4dgk"]
+
+[ext_resource type="Texture2D" uid="uid://d0obboep3dvwm" path="res://Assets/darkPurple.png" id="1_gx4rf"]
+[ext_resource type="Script" path="res://Scenes/Levels/maze.gd" id="1_owwk5"]
+
+[node name="Maze" type="Area2D"]
+script = ExtResource("1_owwk5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-129, -94, -133, 94, 93, 270, -50, 603, 247, 719, 609, 770, 657, 530, 1333, 554, 1583, -6, 1241, -246, 1597, -510, 1384, -706, 1774, -862, 1418, -1348, 414, -1258, 131, -803, 354, -718, 530, -1074, 1293, -1165, 1358, -936, 1061, -851, 1098, -602, 1220, -503, 942, -265, 1316, 43, 1191, 346, 572, 323, 309, 530, 377, 193, 162, 6, 162, -135, 363, -129, 368, -514, -381, -517, -378, -110)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("1_gx4rf")
+polygon = PackedVector2Array(-129, -94, -133, 94, 93, 270, -50, 603, 247, 719, 609, 770, 657, 530, 1333, 554, 1583, -6, 1241, -246, 1597, -510, 1384, -706, 1774, -862, 1418, -1348, 414, -1258, 131, -803, 354, -718, 530, -1074, 1293, -1165, 1358, -936, 1061, -851, 1098, -602, 1220, -503, 942, -265, 1316, 43, 1191, 346, 572, 323, 309, 530, 377, 193, 162, 6, 162, -135, 363, -129, 368, -514, -381, -517, -378, -110)
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
